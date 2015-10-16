@@ -1,0 +1,19 @@
+<html>
+<div> 
+    <h3>Albums</h3>
+    <div class="row" style="height: 200px"> 
+        <div ng-repeat="album in albums" class="col-xs-4" style="height: 200px"> 
+            <div class="thumbnail" style="height: 200px"> 
+                <img ng-src="{{ album.imageUrl }}" style="height: 200px"> 
+                <div class="caption"> 
+                    <h5> 
+                        <a ng-click="viewAlbum(album._id)" href="#">{{ album.name }}</a> 
+                    </h5> 
+                    <small>{{ album.songs.length }} songs</small> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+</div>
+
+</html>
