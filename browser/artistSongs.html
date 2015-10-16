@@ -1,8 +1,4 @@
-<div class="album">
-	<p>
-		<h3>{{ album.name }}</h3>
-		<img ng-src="{{ album.imageUrl }}" class="img-thumbnail">
-	</p>
+<h4>SONGS</h4>
 	<table class='table'>
 		<thead>
 			<tr>
@@ -13,7 +9,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="song in album.songs" ng-class="{active: isCurrent(song)}">
+			<tr ng-repeat="song in artist.songs" ng-class="{active: isCurrent(song)}">
 				<td>
 					<button ng-hide="isCurrent(song)" ng-click="start(song)" class="btn btn-default btn-xs">
 						<span class="glyphicon glyphicon-play"></span>
@@ -25,13 +21,3 @@
 			</tr>
 		</tbody>
 	</table>
-</div>
-
-
-
-
-
-
-
-
-<!-- ui-sref="album({id: '5620101aa2baabeac4ce2cf5'})"" -->
